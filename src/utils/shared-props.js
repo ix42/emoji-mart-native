@@ -31,6 +31,7 @@ const PickerPropTypes = {
   perLine: PropTypes.number,
   rows: PropTypes.number,
   pagesToEagerLoad: PropTypes.number,
+  viewWidth: PropTypes.string,
   emojiSize: PropTypes.number,
   emojiMargin: PropTypes.number,
   anchorSize: PropTypes.number,

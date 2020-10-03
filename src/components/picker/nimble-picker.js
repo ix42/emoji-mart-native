@@ -393,6 +393,7 @@ export default class NimblePicker extends React.PureComponent {
         perLine,
         rows,
         pagesToEagerLoad,
+		viewWidth,
         emojiSize,
         emojiMargin,
         anchorSize,
@@ -435,7 +436,7 @@ export default class NimblePicker extends React.PureComponent {
     // const emojisListHeight = PixelRatio.roundToNearestPixel(
     //   rows * emojiSizing + emojiMargin,
     // )
-    const emojisListWidth = 320
+    const emojisListWidth = viewWidth != null ? viewWidth : 320
     const emojisListHeight = rows * emojiSizing + emojiMargin
 
     return (
@@ -497,6 +498,7 @@ export default class NimblePicker extends React.PureComponent {
                 perLine={perLine}
                 rows={rows}
                 pagesToEagerLoad={pagesToEagerLoad}
+				viewWidth={viewWidth}
                 native={native}
                 data={this.data}
                 i18n={this.i18n}

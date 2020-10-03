@@ -221,6 +221,7 @@ export default class Category extends React.Component {
         perLine,
         rows,
         pagesToEagerLoad,
+		viewWidth,
         notFound,
         notFoundEmoji,
       } = this.props,
@@ -240,7 +241,7 @@ export default class Category extends React.Component {
     // const emojisListHeight = PixelRatio.roundToNearestPixel(
     //   rows * emojiSizing + emojiMargin,
     // )
-    const emojisListWidth = 320
+    const emojisListWidth = viewWidth != null ? viewWidth : 320
     const emojisListHeight = rows * emojiSizing + emojiMargin
 
     const paginatedEmojis = chunk(emojis, perLine * rows)
